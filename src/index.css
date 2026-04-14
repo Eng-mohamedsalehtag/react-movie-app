@@ -9,6 +9,27 @@
   --color-red: #fa5252;
   --color-red-dark: #e03131;
 }
+body.light {
+  --color-primary: #4c6ef5;
+  --color-primary-light: #5c7cfa;
+
+  --color-text: #212529;
+  --color-text-dark: #495057;
+
+  --color-background-100: #f1f3f5;
+  --color-background-500: #e9ecef;
+  --color-background-900: #ffffff;
+
+  --color-red: #fa5252;
+  --color-red-dark: #e03131;
+}
+.theme-btn {
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
 
 * {
   margin: 0;
@@ -34,7 +55,7 @@ body {
 
 .nav-bar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   height: 7.2rem;
   padding: 0 3.2rem;

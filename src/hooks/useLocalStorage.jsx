@@ -4,9 +4,12 @@ export function useLocalStorage(key, initialValue) {
   const [value, setValue] = useState(() => {
     try {
       const stored = localStorage.getItem(key);
-      return stored ? JSON.parse(stored) : initialValue;
+
+      if (stored) return JSON.parse(stored);
+
+      return typeof initialValue === "function" ? initialValue() : initialValue;
     } catch {
-      return initialValue;
+      return typeof initialValue === "function" ? initialValue() : initialValue;
     }
   });
 
